@@ -1,0 +1,58 @@
+= Giddyup
+
+Assign pony to timeslots and riders to produce a better schedule.
+
+To run giddyup you will need Java SDK installed
+
+### Install Java SDK by sdkman
+
+Install sdkman by the [installation guide](https://sdkman.io/install)
+
+After sdkman installation run:
+
+```shell script
+sdk install java
+```
+
+== Run the application
+
+. Git clone the optaplanner-quickstarts repo:
++
+[source, shell]
+----
+$ git clone https://github.com/dupliaka/giddyup.git
+----
+
+. Build the application with Maven and run:
++
+[source, shell]
+----
+$ mvn verify
+...
+$ java -jar target/giddyup-run.jar
+----
+
+Look for the planning solution in the console log.
+
+```
+|            | B. Madden  | G. Morris  | I. Millar  | L. Kraut   |
+|------------|------------|------------|------------|------------|
+| MON 08:30  | R. Dash    | Spike      | Celestia   | Zecora     |
+|------------|------------|------------|------------|------------|
+| MON 09:30  | Applejack  | S. Glimmer | Luna       | M. Pie     |
+|------------|------------|------------|------------|------------|
+| MON 10:30  | P. Pie     | T. Sparkle | Discord    | A. Bloom   |
+|------------|------------|------------|------------|------------|
+| MON 13:30  | Fluttershy | S. Shimmer | BigMac     | S. Belle   |
+|------------|------------|------------|------------|------------|
+| MON 14:30  | Rarity     | Trixie     | G. Smith   | Scootaloo  |
+|------------|------------|------------|------------|------------|
+
+```
+
+Change the TimeTableApp.generateDemoData to play with your data
+Change the constraints at TimeTableConstraintProvider to apply specific rules
+
+== More information
+
+Visit https://www.optaplanner.org/[www.optaplanner.org].
